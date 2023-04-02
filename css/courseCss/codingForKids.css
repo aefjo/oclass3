@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: crimson;
+    color: white;
+}
+
+body {
+    position: relative;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.05);
+    background: white;
+    z-index: 10;
+}
+
+.logo {
+    width: 8em;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.navigation {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: calc(100vh - 80px);
+    padding: 40px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navigation.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navigation li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.navigation li a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.navigation li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+.navigation li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#toggleMenu {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+
+}
+
+#toggleMenu li {
+    list-style: none;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    border-radius: 4px;
+}
+
+#toggleMenu::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    border-radius: 8px;
+    opacity: 0;
+}
+#toggleMenu::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+#toggleMenu.active li {
+    opacity: 0;
+}
+
+#toggleMenu.active::before,
+#toggleMenu.active::after {
+    opacity: 1;
+}
+
+#linkWa {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    width: 70px;
+    height: 70px;
+}
+
+#linkWa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#courseCoding {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 40px;
+}
+
+#courseCoding h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#courseCoding .boxCardInggris {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#courseCoding .boxCardInggris .card {
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background-color: #fff;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#courseCoding .boxCardInggris .card .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--i);
+    clip-path: circle(180px at center 0);
+    text-align: center;
+}
+
+#courseCoding .boxCardInggris .card .circle h2 {
+    color: white;
+    font-size: 2.05em;
+    padding: 30px 0px;
+}
+
+#courseCoding .boxCardInggris .card .content {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+#courseCoding .boxCardInggris .card .content p {
+    color: #666;
+    height: 140px;
+    text-align: center;
+    overflow: auto;
+}
+
+#courseCoding .boxCardInggris .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--i);
+    color: white;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 20px;
+}

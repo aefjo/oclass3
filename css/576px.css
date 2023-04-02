@@ -1,0 +1,59 @@
+@media (max-width: 576px) {
+    .container {
+        height: auto;
+        padding: 150px 0px;
+        background: none;
+    }
+
+    .container img {
+        width: 90%;
+    }
+
+    #about {
+        padding: 30px 40px;
+    }
+
+    #course {
+        padding: 100px 20px;
+    }
+
+    #testimoni {
+        padding: 100px 10px;
+    }
+
+    #testimoni .boxTestimoni .cardTestimoni {
+        min-width: 300px;
+    }
+
+    #testimoni a {
+        padding: 1.2em 2em;
+    }
+
+    #instructor {
+        padding: 100px 20px;
+    }
+
+    #contact {
+        padding: 100px 20px;
+        gap: 10px;
+    }
+
+    #contact .boxContact {
+        min-width: 300px;
+        width: 400px;
+    }
+
+    #contact .imgContact {
+        min-width: 300px;
+        width: 400px;
+    }
+
+    footer {
+        font-size: 0.7em;
+    }
+
+    .flayer .sliderBox {
+        width: 300px;
+        height: 300px;
+    }
+}
